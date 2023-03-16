@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentst</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Дюна (2021)</h1>
+        <h2>Рецензии зрителей</h2>
+
+        <div class="comments">
+            <div class="comments__list" id="commentsList">
+                
+            </div>
+        </div>
+
+        <h2>Добавить комментарий</h2>
+        <form class="addComment" id="newComment">
+            <div class="row">
+                <div class="field">
+                    <input type="text" placeholder="Имя*" name="author" data-required="required">
+                </div>
+
+                <div class="field">
+                    <input type="date" id="start" name="date" value="2023-07-22" min="2023-01-01"
+                        max="2023-12-31">
+                </div>
+
+            </div>
+
+            <div class="field">
+                <textarea name="commentText" id="" placeholder="Комментарий*" data-required=""></textarea>
+            </div>
+
+            <button type="submit">Отправить комментарий</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

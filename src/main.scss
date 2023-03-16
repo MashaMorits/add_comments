@@ -1,0 +1,168 @@
+* {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Roboto';
+    background: #f4f4f4;
+    padding: 40px 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.comments {
+    margin: 30px 0;
+}
+
+
+.comment {
+    margin-top: 20px;
+    margin-bottom: 70px;
+
+    background: rgba(59, 179, 59, .1);
+
+    &__top {
+        padding: 16px 25px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(31, 31, 31, .07);
+
+        .name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 13px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, .6);
+        }
+    }
+
+    .text {
+        padding: 16px 25px;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+
+    }
+
+    &__bottom {
+        padding: 16px 25px;
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            margin-left: 30px;
+            fill: gray;
+            transition: .3s linear;
+            cursor: pointer;
+
+            &:hover {
+                fill: #f50;
+                transition: .3s linear;
+            }
+
+            &.active {
+                fill: #f50;
+                transition: .3s linear;
+            }
+        }
+    }
+
+
+}
+
+.addComment {
+    margin-top: 30px;
+    background: rgba(59, 179, 59, 0.266);
+    padding: 25px;
+
+    .field {
+        position: relative;
+        margin-bottom: 20px;
+
+        &.error {
+            border: 1px solid red;
+
+            &::after {
+                content: 'Введите не менее 3 букв';
+                position: absolute;
+                z-index: 10;
+                left: 15px;
+                top: -15px;
+                color: red;
+                font-size: 12px;
+                display: block;
+            }
+        }
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        position: relative;
+
+
+    }
+
+    textarea {
+        width: -webkit-fill-available;
+        display: block;
+        font-family: 'Roboto';
+    }
+
+
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+
+        .field {
+            width: 48%;
+
+            input {
+                width: 100%;
+                height: 40px;
+            }
+        }
+    }
+
+    button {
+        background: linear-gradient(135deg, #f50 69.91%, #d6bb00);
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 25px;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: block;
+        cursor: pointer;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 14px;
+        transition: .2s linear;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: .3s linear;
+        }
+    }
+}
